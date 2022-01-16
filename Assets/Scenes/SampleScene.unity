@@ -2253,11 +2253,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fe520b4a43f274fb7e57ccbdd813e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
+  fireRate: 1
   Damage: 10
   whatToHit:
     serializedVersion: 2
     m_Bits: 115
+  BulletTrailPrefab: {fileID: 9129967994005846202, guid: 7b5f82ba8ad4aed4c8bf91bce9d4faa5, type: 3}
+  effectSpawnRate: 1
 --- !u!1 &1485723627
 GameObject:
   m_ObjectHideFlags: 0
