@@ -6,10 +6,11 @@ public class Weapon : MonoBehaviour
 {
 
     public float fireRate = 0;
-    public float Damage = 10;
+    public int Damage = 10;
     public LayerMask whatToHit;
 
     public Transform BulletTrailPrefab;
+    public Transform MuzzleFlashPrefab;
     float timeToSpawnEffect = 0;
     public float effectSpawnRate = 10;
     float timeToFire = 0;
@@ -59,14 +60,27 @@ public class Weapon : MonoBehaviour
         Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100);
         if (hit.collider != null)
         {
-            Debug.DrawLine(firePointPosition, hit.point, Color.red);
-            Debug.Log("We Hit " + hit.collider.name + "and did" + Damage + "Damage");
+            //Debug.DrawLine(firePointPosition, hit.point, Color.red);
+           
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if(enemy != null)
+            {
+                enemy.DamageEnemy(Damage);
+                Debug.Log("We Hit " + hit.collider.name + "and did" + Damage + "Damage");
+            }
         }
     }
 
     void Effect()
     {
+        
         Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+        Transform clone = Instantiate(MuzzleFlashPrefab, firePoint.position, firePoint.rotation) as Transform;
+        clone.parent = firePoint;
+        float size = Random.Range(1.5f, 2f);
+        clone.localScale = new Vector3(size, size, size);
+        
+        Destroy(clone.gameObject,0.02f);
     }
 
 
