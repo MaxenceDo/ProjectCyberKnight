@@ -10,7 +10,7 @@ public class EnnemiAI : MonoBehaviour
   
     private Vector3 currentPosition;
     private Vector3 targetPosition;
-    
+    private SpriteRenderer mySpriteRenderer;
     public float updateRate = 2f;
     public bool acces = true;
     private Seeker seeker;
@@ -29,6 +29,13 @@ public class EnnemiAI : MonoBehaviour
     public float nextWaypointDistance = 3;
 
     private int currentWaypoint = 0;
+
+    void Awake()
+    {
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        //direction = 1;
+        //someScale = transform.localScale.x;
+    }
 
     void Start()
     {
@@ -86,8 +93,9 @@ public class EnnemiAI : MonoBehaviour
             float angle = Mathf.Atan2(dire.x, 90) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Vector3 lTemp = transform.localScale;
-            lTemp.x *= -1;
-            transform.localScale = lTemp;
+            //lTemp.x *= -1;
+            //transform.localScale = lTemp;
+            mySpriteRenderer.flipX = false;
             acces = false;
         }
         if (dire.x <= 0 
@@ -97,9 +105,9 @@ public class EnnemiAI : MonoBehaviour
             float angle = Mathf.Atan2(dire.x, 90) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Vector3 lTemp = transform.localScale;
-            lTemp.x *= -1;
-            transform.localScale = lTemp;
-            
+            //lTemp.x *= -1;
+            //transform.localScale = lTemp;
+            mySpriteRenderer.flipX = true;
             acces = true;
         }
         
