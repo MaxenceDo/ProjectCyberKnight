@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+
+    public float camShakeAmt = 0.1f;
+    public float camShakeLength = 0.1f;
+    CameraShake camShake;
+
+
+
     [System.Serializable]
     public class EnemyStats
     {
         public int maxHealth = 100;
-        
+
+
         private int _curHealth;
         public int curHealth
         {
@@ -31,6 +40,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        camShake = GameMaster.gm.GetComponent<CameraShake>();
         stats.Init();
         if (statusIndicator != null)
         {
@@ -60,6 +70,7 @@ public class Enemy : MonoBehaviour
         {
             _player.DamagePlayer(stats.damage);
             DamageEnemy(99999);
+            camShake.Shake(camShakeAmt, camShakeLength);
         }
     }
 }

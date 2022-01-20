@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485883952179103436}
   - component: {fileID: 1745866896149759957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,9 +84,11 @@ GameObject:
   - component: {fileID: 4631402591397994335}
   - component: {fileID: -967605362945796832}
   - component: {fileID: -8529075290869268352}
-  m_Layer: 0
+  - component: {fileID: 4073407633423911112}
+  - component: {fileID: -8271218312553731665}
+  m_Layer: 8
   m_Name: Tir
-  m_TagString: Untagged
+  m_TagString: Tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 71f4e0aacc3f5ce42896d6d6e1c4d1c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7e7e3bca6acbd240b9e6257f30b4f6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,9 +190,37 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 0.5}
+  m_Direction: 1
+--- !u!114 &4073407633423911112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325372302837472381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f24d00713ff7a439541a9f1d2a4bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &-8271218312553731665
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325372302837472381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: 0.01}
-  m_Size: {x: 0.65, y: 0.23}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.01

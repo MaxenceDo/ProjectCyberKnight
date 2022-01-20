@@ -95,7 +95,7 @@ public class EnnemiAI : MonoBehaviour
             Vector3 lTemp = transform.localScale;
             //lTemp.x *= -1;
             //transform.localScale = lTemp;
-            mySpriteRenderer.flipX = false;
+            //mySpriteRenderer.flipX = false;
             acces = false;
         }
         if (dire.x <= 0 
@@ -107,7 +107,7 @@ public class EnnemiAI : MonoBehaviour
             Vector3 lTemp = transform.localScale;
             //lTemp.x *= -1;
             //transform.localScale = lTemp;
-            mySpriteRenderer.flipX = true;
+            //mySpriteRenderer.flipX = true;
             acces = true;
         }
         
