@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int Damage = 10;
+    public static int Damage = 10;
     public float camShakeAmt = 0.1f;
     public float camShakeLength = 0.1f;
+    public static int healthChange;
+
+    public static int money = 300;
+    public static int Money {get => money; set => money = value;}
+
     CameraShake camShake;
 
     [System.Serializable]
@@ -25,16 +30,27 @@ public class Player : MonoBehaviour
         {
             curHealth = maxHealth;
         }
+
+        public void UpdateMaxHealth(int health){
+            maxHealth += health;
+        }
     }
 
     public PlayerStats stats = new PlayerStats();
 
     public int GoOut = -15;
 
+    public static int IncreaseMaxHealth(int Health){
+        return Health;
+    }
+
+    public static void updateMoney(int minusMoney){
+        money -= minusMoney;
+    }
+
 
     [SerializeField]
     private StatusIndicator statusIndicator;
-
     void Start()
     {
         camShake = GameMaster.gm.GetComponent<CameraShake>();
@@ -54,6 +70,9 @@ public class Player : MonoBehaviour
         //Debug.Log(transform.position.x);
         if (transform.position.x <= GoOut)
             DamagePlayer(9999999);
+        stats.UpdateMaxHealth(healthChange);
+        healthChange=0;
+        
 
     }
 

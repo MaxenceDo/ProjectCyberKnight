@@ -17,15 +17,17 @@ public class GameMaster : MonoBehaviour
     }
 
 
- public static void KillPlayer (Player player)
+    public static void KillPlayer (Player player)
     {
         Destroy(player.gameObject);
     }
 
-public static void KillEnemy(Enemy enemy)
+    public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
     }
+
+    
 
 
 }

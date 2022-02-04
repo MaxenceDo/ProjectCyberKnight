@@ -6,7 +6,8 @@ public class Weapon : MonoBehaviour
 {
 
     public float fireRate = 0;
-    public int Damage = 10;
+    public static int Damage = 10;
+    public static int DamageGen {get => Damage; set => Damage = value;}
     public LayerMask whatToHit;
 
     public Transform BulletTrailPrefab;
@@ -39,6 +40,10 @@ public class Weapon : MonoBehaviour
         {
             Debug.LogError("NoShaking script found");
         }
+    }
+
+    public static void updateDamage(int dmg){
+        Damage += dmg;
     }
 
     // Update is called once per frame
