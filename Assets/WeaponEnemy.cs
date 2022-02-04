@@ -27,7 +27,6 @@ public class WeaponEnemy : MonoBehaviour
         {
             Debug.LogError("No Eject ??");
         }
-
     }
 
     void Update()
@@ -40,19 +39,15 @@ public class WeaponEnemy : MonoBehaviour
         //  StartCoroutine(Faire());
         // }
 
+        elapsedTime = Time.time - startTime;
 
-
-
-
-        //elapsedTime = Time.time - startTime;
-
-        //if (elapsedTime >= shotTime)
-        //{
-        //    startTime = Time.time;
-        //    GameObject Tir = Instantiate(Projectil, firePoint.position, Projectil.transform.rotation) as GameObject;
-        //    Tir.GetComponent<Rigidbody2D>().velocity = firePoint.TransformDirection(new Vector2(1, 0) * force);
-        //    Destroy(Tir, 2f);
-        //}
+        if (elapsedTime >= shotTime)
+        {
+            startTime = Time.time;
+            GameObject Tir = Instantiate(Projectil, firePoint.position, Projectil.transform.rotation) as GameObject;
+            Tir.GetComponent<Rigidbody2D>().velocity = firePoint.TransformDirection(new Vector2(1, 0) * force);
+            Destroy(Tir, 2f);
+        }
         
         
 

@@ -25,7 +25,6 @@ public class GameMaster : MonoBehaviour
 public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
-        RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
     }
 
 

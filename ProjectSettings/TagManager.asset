@@ -8,7 +8,6 @@ TagManager:
   - Ennemi
   - GM
   - Tir
-  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,8 +19,8 @@ TagManager:
   - Player
   - Tir
   - Room
-  - Wall
-  - Door
+  - 
+  - 
   - 
   - 
   - 
@@ -45,7 +44,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Wall
-    uniqueID: 1058318103
     locked: 0
