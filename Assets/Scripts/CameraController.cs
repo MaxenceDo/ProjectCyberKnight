@@ -48,5 +48,6 @@ public class CameraController : MonoBehaviour
     public bool IsSwitchingScene()
     {
         return transform.position.Equals(GetCameraTargetPosition()) == false;
+        
     }
 }

@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: de63b7737f58c9145a326193adf59794
   - enabled: 0
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/BasementEnd.unity
     guid: 149f1f5651ea97a45a4e3d772150321b
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/BasementBasic1.unity
+    guid: de1a69358fa8f794aa090fcf570015d7
   m_configObjects: {}

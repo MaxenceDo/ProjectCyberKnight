@@ -11,6 +11,8 @@ public class RotationArmeEnemy : MonoBehaviour
     public Transform target2;
     public bool acces = true;
     private SpriteRenderer mySpriteRenderer;
+    private Transform playerPos;
+    GameObject player;
     //void FixedUpdate()
     //{
     //posMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -32,6 +34,10 @@ public class RotationArmeEnemy : MonoBehaviour
 
 
     //}
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void Awake()
     {
@@ -44,19 +50,23 @@ public class RotationArmeEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        playerPos = player.transform;
         posMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         currentPosition = target2.position;
-        Vector3 difference = target.position - transform.position;
+        Vector3 difference = playerPos.position - transform.position;
         difference.Normalize();
 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
 
-        Vector3 dire = target.position - transform.position;
-
-        if (-currentPosition.x + target.position.x < 0)
+        Vector3 dire = playerPos.position - transform.position;
+        Debug.Log("DIREX");
+        Debug.Log(playerPos.position.x);
+        Debug.Log("DIREY");
+        Debug.Log( playerPos.position.y);
+        if (-currentPosition.x + playerPos.position.x < 0)
         {
-            //Debug.Log("OUII");
+            
             transform.localScale = new Vector3(1.5f, -1.5f, 1);
             target2.localScale = new Vector3(1.5f, 1.5f, 1);
             //mySpriteRenderer.flipX = false;
