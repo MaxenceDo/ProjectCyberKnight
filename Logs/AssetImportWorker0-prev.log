@@ -1,10 +1,14 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.18f1 (a7d1c678663c) revision 10998214'; Using compiler version '192528614'; Build Type 'Release'
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 OS: 'Windows 10 Home; OS build 19044.1466; Version 2009; 64bit' Language: 'fr' Physical Memory: 16322 MB
 =======
 OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'en' Physical Memory: 4092 MB
 >>>>>>> Stashed changes
+=======
+OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'en' Physical Memory: 4092 MB
+>>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -19,6 +23,7 @@ C:/Users/Visual/Documents/GitHub/ProjectCyberKnight
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 52638
 Successfully changed project path to: C:/Users/maxen/Documents/GitHub/ProjectCyberKnight
@@ -40,6 +45,13 @@ Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 821.05 ms, found 3 plugins.
 >>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
 >>>>>>> Stashed changes
+=======
+59101
+Successfully changed project path to: C:/Users/Visual/Documents/GitHub/ProjectCyberKnight
+C:/Users/Visual/Documents/GitHub/ProjectCyberKnight
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 821.05 ms, found 3 plugins.
+>>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -55,6 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
 =======
@@ -529,3 +542,7 @@ Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,susp
 Begin MonoManager ReloadAssembly
 >>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
 >>>>>>> Stashed changes
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+Begin MonoManager ReloadAssembly
+>>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
