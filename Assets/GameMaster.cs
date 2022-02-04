@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-
+    
     public static GameMaster gm;
+    
+
 
     void Awake()
     {
@@ -24,6 +26,7 @@ public class GameMaster : MonoBehaviour
 
 public static void KillEnemy(Enemy enemy)
     {
+
         Destroy(enemy.gameObject);
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
     }

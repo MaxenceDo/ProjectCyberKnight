@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float camShakeAmt = 0.1f;
     public float camShakeLength = 0.1f;
     CameraShake camShake;
-
+    public GameObject coin;
 
 
     [System.Serializable]
@@ -53,6 +53,8 @@ public class Enemy : MonoBehaviour
         stats.curHealth -= damage;
         if (stats.curHealth <= 0)
         {
+            Vector2 EnnemiPos = new Vector2(transform.position.x, transform.position.y);
+            Instantiate(coin, EnnemiPos, Quaternion.identity);
             GameMaster.KillEnemy(this);
         }
 
