@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
     public GameObject bulletPrefab;
     Transform firePoint;
     Transform arme;
+    AudioSource pew;
 
     public GameObject Projectil;
     public int force = 10;
@@ -44,6 +45,8 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        pew = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -151,6 +154,8 @@ public class EnemyController : MonoBehaviour
                     GameObject Tir = Instantiate(Projectil, firePoint.position, Projectil.transform.rotation) as GameObject;
                     Tir.GetComponent<Rigidbody2D>().velocity = firePoint.TransformDirection(new Vector2(1, 0) * force);
                     Destroy(Tir, 2f);
+                    
+                    pew.Play();
                     StartCoroutine(CoolDown());
                 break;
             }

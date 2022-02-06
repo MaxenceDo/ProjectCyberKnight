@@ -26,6 +26,7 @@ public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
+        SFXPlayer.PlayGunshot();
     }
 
 

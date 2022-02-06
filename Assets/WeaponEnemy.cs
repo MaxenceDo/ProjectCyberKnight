@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponEnemy : MonoBehaviour
 {
     public GameObject Projectil;
+    
  
     public int force = 10;
     public float shotTime;

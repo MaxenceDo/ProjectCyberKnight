@@ -38,6 +38,8 @@ public class EnemyControllerEnemy2 : MonoBehaviour
     Transform firePoint2;
     Transform arme;
 
+    AudioSource pew;
+
     public GameObject Projectil;
     public int force = 10;
 
@@ -45,6 +47,7 @@ public class EnemyControllerEnemy2 : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        pew = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -152,6 +155,8 @@ public class EnemyControllerEnemy2 : MonoBehaviour
                     //bullet.GetComponent<BulletController>().GetPlayer(player.transform);
                     //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
                     //bullet.GetComponent<BulletController>().isEnemyBullet = true;
+
+                    pew.Play();
 
                     GameObject Tir1 = Instantiate(Projectil, firePoint2.position, Projectil.transform.rotation) as GameObject;
                     Tir1.GetComponent<Rigidbody2D>().velocity = firePoint2.TransformDirection(new Vector2(1, 0) * force);

@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public float camShakeAmt = 0.1f;
     public float camShakeLength = 0.1f;
     CameraShake camShake;
+    AudioSource GunShot;
 
     float timeToFire = 0;
     Transform firePoint;
@@ -39,6 +40,7 @@ public class Weapon : MonoBehaviour
         {
             Debug.LogError("NoShaking script found");
         }
+        GunShot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class Weapon : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time > timeToFire)
             {
                 timeToFire = Time.time + 1 / fireRate;
+                GunShot.Play();
                 Shoot();
             }
         }

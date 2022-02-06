@@ -1095,7 +1095,7 @@ SpriteRenderer:
   m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &991979750
@@ -1328,6 +1328,7 @@ SpriteRenderer:
   m_SortingOrder: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 0c3dfd15daa116f4584b4dca6152e5c5, type: 3}
 =======
   m_Sprite: {fileID: 21300000, guid: 47bba184502729143a1a38554c9f9320, type: 3}
@@ -1335,6 +1336,9 @@ SpriteRenderer:
 =======
   m_Sprite: {fileID: 21300000, guid: 47bba184502729143a1a38554c9f9320, type: 3}
 >>>>>>> 7698743e5ec53fae2761e2f43a9a84f4f9126e7c
+=======
+  m_Sprite: {fileID: 21300000, guid: 081fc957f2ba94041951acdf2713f9a6, type: 3}
+>>>>>>> parent of 7698743 (Carotte)
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1514,11 +1518,6 @@ MonoBehaviour:
   Height: 17
   X: 0
   Y: 0
-  leftDoor: {fileID: 0}
-  rightDoor: {fileID: 0}
-  topDoor: {fileID: 0}
-  bottomDoor: {fileID: 0}
-  doors: []
 --- !u!61 &1350075182
 BoxCollider2D:
   m_ObjectHideFlags: 0
