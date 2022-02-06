@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     public PlayerStats stats = new PlayerStats();
 
-    
+    public int GoOut = -15;
 
 
     [SerializeField]
@@ -52,7 +52,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         //Debug.Log(transform.position.x);
-        
+        if (transform.position.x <= GoOut)
+            DamagePlayer(9999999);
 
     }
 
